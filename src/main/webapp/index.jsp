@@ -13,7 +13,10 @@
 <a href="hello-servlet">Hello Servlet</a>
 
 -->
-
+<!-- esta linea que comentamos redireccion a ejecutar el Servlet. ahora cambiamos para que redireccione a /runners/list
 <a href="Servlet">Ejecutar Servlet!</a>
+-->
+
+<% response.sendRedirect("runners/runnerslist"); %>
 </body>
 </html>
