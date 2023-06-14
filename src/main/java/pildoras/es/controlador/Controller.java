@@ -34,7 +34,30 @@ public class Controller {
 
 /*****************************************************************************/
 
+    @RequestMapping("/addRunnerURL")
+    public String addRunnerToList (Model theModel){
+
+        // Bind de datos de los runners
+
+        Runner oneRunner = new Runner();
+
+        theModel.addAttribute("runnerAttribute", oneRunner);
+
+        return "addRunnerFile";
+
+    }
+
 /*****************************************************************************/
+
+    @PostMapping("/insertRunnerURL")
+    public String insertRunnerMethod (@ModelAttribute("runnerAttribute") Runner theRunner) {
+
+        // insertar runner en la BBDD
+
+        daoClient.insertOneRunner (theRunner);
+
+        return "redirect:/runners/runnerslist";
+    }
 
 /*****************************************************************************/
 

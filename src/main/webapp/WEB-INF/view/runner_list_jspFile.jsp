@@ -7,13 +7,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Title</title>
+
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/estilos.css"  />
+
 </head>
 <body>
 
-    <table>
+
+    <table border="1">
 
         <tr>
             <th>Nombre</th>
@@ -41,5 +46,10 @@
         </c:forEach>
 
     </table>
+
+    <!-- boton que nos lleva al formuario de agregar runner -->
+    <input type="button" value="Agregar runner" onclick="window.location.href='addRunnerURL';return false;">
+
+
 </body>
 </html>
