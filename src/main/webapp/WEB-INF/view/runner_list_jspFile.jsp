@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ClaudioCristianLopez
@@ -12,6 +13,33 @@
 </head>
 <body>
 
-    Here we will see the runner list
+    <table>
+
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Email</th>
+            <th>Dorsal</th>
+            <th>Tiempo</th>
+
+        </tr>
+
+        <c:forEach var="runnersTEMP" items="${runnerAttribute}">
+
+            <tr>
+                <td>${runnersTEMP.nombre}</td>
+                <td>${runnersTEMP.apellido}</td>
+                <td>${runnersTEMP.edad}</td>
+                <td>${runnersTEMP.email}</td>
+                <td>${runnersTEMP.dorsal}</td>
+                <td>${runnersTEMP.tiempo}</td>
+
+            </tr>
+
+
+        </c:forEach>
+
+    </table>
 </body>
 </html>
