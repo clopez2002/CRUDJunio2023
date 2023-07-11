@@ -50,7 +50,10 @@ public class DAOClass implements DAO{
 
         // insertar el  maldito runner
 
-        mySession.save(theRunner);
+        // mySession.save(theRunner); este metodo solo inserta, pero tambien debe poder ACtualizar, por eso usamos el
+        // siguiente:
+
+        mySession.saveOrUpdate(theRunner);
 
     }
 

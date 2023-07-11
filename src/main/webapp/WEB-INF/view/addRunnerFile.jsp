@@ -18,7 +18,7 @@
 
         <form:hidden path="id"/>
 
-        <table>
+        <table border="1">
                 <tr>
                     <td>Nombre</td>
                     <td><form:input path="nombre"/></td>
@@ -52,7 +52,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2"><input type="submit" value="Update"></td>
+                    <td colspan="2"><input type="submit" value="Insert"></td>
 
                 </tr>
 
