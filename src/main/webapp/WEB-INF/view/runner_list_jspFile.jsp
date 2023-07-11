@@ -28,9 +28,19 @@
             <th>Dorsal</th>
             <th>Tiempo</th>
 
+            <!-- Boton de Modificar-->
+
+            <th>Modificar</th>
+
         </tr>
 
         <c:forEach var="runnersTEMP" items="${runnerAttribute}">
+
+            <c:url var="updateLink" value="/runners/updateRunnerURL">
+
+                <c:param name="runnerId" value="${runnersTEMP.id}"/>
+
+            </c:url>
 
             <tr>
                 <td>${runnersTEMP.nombre}</td>
@@ -39,6 +49,9 @@
                 <td>${runnersTEMP.email}</td>
                 <td>${runnersTEMP.dorsal}</td>
                 <td>${runnersTEMP.tiempo}</td>
+
+                <!-- Boton de modificae -->
+                <td><a href="${updateLink}"><input type="button" value="Update"/></a> </td>
 
             </tr>
 

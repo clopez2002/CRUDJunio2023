@@ -16,6 +16,8 @@
 
     <form:form action="insertRunnerURL" modelAttribute="runnerAttribute" method="post">
 
+        <form:hidden path="id"/>
+
         <table>
                 <tr>
                     <td>Nombre</td>
@@ -50,7 +52,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2"><input type="submit" value="Insert"></td>
+                    <td colspan="2"><input type="submit" value="Update"></td>
 
                 </tr>
 
