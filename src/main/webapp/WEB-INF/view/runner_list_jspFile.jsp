@@ -84,6 +84,10 @@
     <!-- boton que nos lleva al formuario de agregar runner -->
     <input type="button" value="Agregar runner" onclick="window.location.href='addRunnerURL';return false;">
 
+    <!-- Agregamos boton para BUCAR un runner -->
+
+    <input type="button" value="Buscar runner por dorsal" onclick="window.location.href='searchRunnerURL';return false;">
+
 
 </body>
 </html>
