@@ -80,6 +80,17 @@ public class Controller {
 
 /*****************************************************************************/
 
+    // no necesitasmo el modelo aca por que vamoa a eliminar
+    @GetMapping("/deleteRunnerURL")
+    public String deleteRunnerMethod (@RequestParam("runnerId") int Id){
+
+        daoClient.deleteRunner(Id);
+
+        return "redirect:/runners/runnerslist";
+
+    }
+
+
 /*****************************************************************************/
 
 }

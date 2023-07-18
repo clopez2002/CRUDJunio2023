@@ -32,6 +32,11 @@
 
             <th>Modificar</th>
 
+            <!-- Boton de ELIMINAR REGISTRO -->
+
+            <th>Eliminar</th>
+
+
         </tr>
 
         <c:forEach var="runnersTEMP" items="${runnerAttribute}">
@@ -42,6 +47,16 @@
 
             </c:url>
 
+
+            <!-- Aca vamos a eliminar-->
+
+            <c:url var="deleteLink" value="/runners/deleteRunnerURL">
+
+                <c:param name="runnerId" value="${runnersTEMP.id}"/>
+
+            </c:url>
+
+
             <tr>
                 <td>${runnersTEMP.nombre}</td>
                 <td>${runnersTEMP.apellido}</td>
@@ -50,8 +65,14 @@
                 <td>${runnersTEMP.dorsal}</td>
                 <td>${runnersTEMP.tiempo}</td>
 
-                <!-- Boton de modificae -->
+                <!-- Boton de modificar -->
                 <td><a href="${updateLink}"><input type="button" value="Update"/></a> </td>
+
+                <!-- Boton de ELIMINAR, aca href apunta al url var de la linea 53!!! -->
+                <!-- Aca vamos a agregar una ventana por SEGURIDAD, preguntando si efectivamente desea eliminar user..-->
+                <td><a href="${deleteLink}"><input type="button" value="Eliminar"
+                                                   onclick="if (!(confirm('Esta seguro de eliminar el usuario?'))) return false"/></a> </td>
+
 
             </tr>
 
