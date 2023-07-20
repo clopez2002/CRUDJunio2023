@@ -96,6 +96,10 @@ public class Controller {
     @RequestMapping("searchRunnerURL")
     public String serachRunnerMethod (Model theModel){
 
+        Runner theRunner = new Runner();
+
+        theModel.addAttribute("runnerAttribute", theRunner);
+
         return "searchRunnerFile";
     }
 
