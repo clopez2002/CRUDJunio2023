@@ -57,6 +57,7 @@
             </c:url>
 
 
+
             <tr>
                 <td>${runnersTEMP.nombre}</td>
                 <td>${runnersTEMP.apellido}</td>
@@ -86,7 +87,7 @@
 
     <!-- Agregamos boton para BUCAR un runner -->
 
-    <input type="button" value="Buscar runner por dorsal" onclick="window.location.href='searchRunnerURL';return false;">
+    <input type="button" value="Buscar runner por dorsal" onclick="window.location.href='getRunnerDorsalURL';return false;">
 
 
 </body>

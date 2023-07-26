@@ -81,7 +81,7 @@ public class Controller {
 /*****************************************************************************/
 
     // no necesitasmo el modelo aca por que vamoa a eliminar
-    @GetMapping("/deleteRunnerURL")
+    @PostMapping("/deleteRunnerURL")
     public String deleteRunnerMethod (@RequestParam("runnerId") int Id){
 
         daoClient.deleteRunner(Id);
@@ -93,17 +93,22 @@ public class Controller {
 
 /*****************************************************************************/
 
-    @RequestMapping("searchRunnerURL")
-    public String serachRunnerMethod (Model theModel){
+    @RequestMapping("/getRunnerDorsalURL")
+    public String serachRunnerMethod (){
 
-        Runner theRunner = new Runner();
 
-        theModel.addAttribute("runnerAttribute", theRunner);
-
-        return "searchRunnerFile";
+        return "getRunnerDorsalFile";
     }
 
 /*****************************************************************************/
+
+     @RequestMapping ("/showResultOfSearchRunnerByDorsalURL")
+    public String findRunnerByDorsalMethod(){
+
+         return "resultOfSearchRunnerByDorsal";
+     }
+
+
 
 /*****************************************************************************/
 

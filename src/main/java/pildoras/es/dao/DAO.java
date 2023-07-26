@@ -13,4 +13,7 @@ public interface DAO {
     Runner getOneRunner(int id);
 
     void deleteRunner(int id);
+
+
+    Runner getRunnerByDorsal(int dorsal);
 }
