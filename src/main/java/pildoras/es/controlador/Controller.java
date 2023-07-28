@@ -7,6 +7,7 @@ import pildoras.es.controlador.entity.Runner;
 import pildoras.es.dao.DAO;
 import pildoras.es.dao.DAOClass;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @org.springframework.stereotype.Controller
@@ -102,8 +103,20 @@ public class Controller {
 
 /*****************************************************************************/
 
-     @RequestMapping ("/showResultOfSearchRunnerByDorsalURL")
-    public String findRunnerByDorsalMethod(){
+    @RequestMapping ("/showResultOfSearchRunnerByDorsalURL")
+    public String findRunnerByDorsalMethod(HttpServletRequest request, Model theModel){
+
+        /*
+                Obtenemos con request.getParameter("aca ponemos lo que buscamos") del formulario
+                con: HttpServletRequest request "levantamos" la info y la recuperamnos con:request.getParameter("parametro......")
+        */
+
+        String dorsalBuscado = request.getParameter("runnerDorsalToSearch");
+
+        Runner oneRunner = daoClient.getRunnerByDorsal(Integer.parseInt(dorsalBuscado));
+
+
+        theModel.addAttribute("runnerAttribute", oneRunner);
 
          return "resultOfSearchRunnerByDorsal";
      }

@@ -98,8 +98,17 @@ public class DAOClass implements DAO{
 
     @Override
     @Transactional
-    public Runner getRunnerByDorsal(int dorsal) {
-        return null;
+    public Runner getRunnerByDorsal(int dorsalToSearch) {
+
+        // obtener la sesion
+
+        Session mySession = sessionFactory.getCurrentSession();
+
+        Query myQuery = mySession.createQuery("from Runner runner where runner.dorsal=:dorsalToSearch");
+
+
+        Runner theRunner = mySession.get(Runner.class, dorsalToSearch);
+        return theRunner;
     }
 
 /*****************************************************************************/

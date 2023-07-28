@@ -35,7 +35,7 @@
 
         <form action="showResultOfSearchRunnerByDorsalURL" method="get">
 
-            <input type="text" name="nombreDelDatoQueIngresamos">
+            <input type="text" name="runnerDorsalToSearch">
             <input type="submit">
         </form>
 
