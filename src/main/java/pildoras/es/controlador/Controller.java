@@ -111,9 +111,9 @@ public class Controller {
                 con: HttpServletRequest request "levantamos" la info y la recuperamnos con:request.getParameter("parametro......")
         */
 
-        String dorsalBuscado = request.getParameter("runnerDorsalToSearch");
+        int dorsalBuscado = Integer.parseInt(request.getParameter("runnerDorsalToSearch"));
 
-        Runner oneRunner = daoClient.getRunnerByDorsal(Integer.parseInt(dorsalBuscado));
+        Runner oneRunner = daoClient.getRunnerByDorsal(dorsalBuscado);
 
 
         theModel.addAttribute("runnerAttribute", oneRunner);
