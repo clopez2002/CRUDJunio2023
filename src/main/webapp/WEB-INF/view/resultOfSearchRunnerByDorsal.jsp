@@ -27,16 +27,7 @@
 
 <%--  --%>
 <%--    <table border="1">--%>
-<%--        <tr>--%>
-<%--            <th>Nombre</th>--%>
-<%--            <th>Apellido</th>--%>
-<%--            <th>Edad</th>--%>
-<%--            <th>Email</th>--%>
-<%--            <th>Dorsal</th>--%>
-<%--            <th>Tiempo</th>--%>
 
-
-<%--        </tr>--%>
 
 <%--        <c:param name="runnersTEMP" value="${runnerAttribute}"/>--%>
 <%--        <tr>--%>
@@ -57,36 +48,33 @@
 
         <table border="1">
             <tr>
-                <td>Nombre</td>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Email</th>
+                <th>Dorsal</th>
+                <th>Tiempo</th>
+
+
+            </tr>
+            <tr>
+
                 <td><form:input path="nombre"/></td>
-            </tr>
 
-            <tr>
-                <td>Apellido</td>
                 <td><form:input path="apellido"/></td>
-            </tr>
 
-            <tr>
-                <td>Edad</td>
+
                 <td><form:input path="edad"/></td>
-            </tr>
 
-            <tr>
-                <td>Email</td>
+
                 <td><form:input path="email"/></td>
-            </tr>
 
-            <tr>
-                <td>Dorsal</td>
+
                 <td><form:input path="dorsal"/></td>
-            </tr>
 
-            <tr>
-                <td>Tiempo</td>
+
                 <td><form:input path="tiempo"/></td>
-            </tr>
 
-            </tr>
 
         </table>
 
